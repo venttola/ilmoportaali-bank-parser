@@ -1,0 +1,114 @@
+  "group": {
+    "name": "Rymän nimi",
+    "description": "Ryhmän kuvaus",
+    "id": 50,
+    "platoon": [
+      {
+        "name": "Jakamatomat",
+        "id": 12
+      }
+    ]
+  },
+  "isPaid": true,
+  "payments": [
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 43,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 58,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    },
+    {
+      "member": "Nimi Nimi",
+      "productSum": 28,
+      "discountSum": 0
+    }
+  ],
+  "totalSum": 787,
+  "refNumber": "100007",
+  "organizationBankAccount": "FI7311073000663413",
+  "barcode": "473110730006634130007870000000000000000000100007191002"
+}
