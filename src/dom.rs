@@ -1,27 +1,27 @@
+#![allow(dead_code)]
 use serde::{Deserialize, Serialize};
-use std::str::FromStr;
 
 pub type Euro = f64;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Group {
     #[serde(rename = "group")]
-    meta: GroupMeta,
+    pub meta: GroupMeta,
     #[serde(rename = "isPaid")]
     is_paid: bool,
     payments: Vec<PersonPayment>,
     #[serde(rename = "totalSum")]
-    total_sum: Euro,
+    pub total_sum: Euro,
     #[serde(rename = "refNumber")]
-    ref_number: String,
+    pub ref_number: String,
     #[serde(rename = "organizationBankAccount")]
-    organization_bank_account: BankAccount,
+    pub organization_bank_account: BankAccount,
     barcode: Barcode,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct GroupMeta {
-    name: String,
+    pub name: String,
     description: String,
     id: u16,
     platoon: Vec<Platoon>,
@@ -38,9 +38,9 @@ pub struct PersonPayment {
     #[serde(rename = "member")]
     name: String,
     #[serde(rename = "productSum")]
-    product_sum: Euro,
+    pub product_sum: Euro,
     #[serde(rename = "discountSum")]
-    discount_sum: Euro,
+    pub discount_sum: Euro,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
