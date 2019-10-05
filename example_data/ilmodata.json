@@ -1,117 +1,160 @@
 [
   {
     "group": {
-      "name": "Rymän nimi",
+      "name": "Ryhmän nimi",
       "description": "Ryhmän kuvaus",
-      "id": 50,
+      "id": 1298,
       "platoon": [
         {
-          "name": "Jakamatomat",
-          "id": 12
+          "name": "Osapuoli",
+          "id": 199
         }
       ]
     },
-    "isPaid": true,
+    "isPaid": false,
     "payments": [
       {
         "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
+        "productSum": 15,
+        "discountSum": -5
       },
       {
         "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 43,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 58,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
-      },
-      {
-        "member": "Nimi Nimi",
-        "productSum": 28,
-        "discountSum": 0
+        "productSum": 15,
+        "discountSum": -5
       }
     ],
-    "totalSum": 787,
-    "refNumber": "100007",
+    "totalSum": 20,
+    "refNumber": "100001608",
     "organizationBankAccount": "FI7311073000663413",
-    "barcode": "473110730006634130007870000000000000000000100007191002"
+    "barcode": "473110730006634130014190000000000000000100002555191005"
+  },
+  {
+    "group": {
+      "name": "Ryhmän Nimi",
+      "description": "Ryhmän kuvaus",
+      "id": 1292,
+      "platoon": [
+        {
+          "name": "Osapuoli",
+          "id": 199
+        }
+      ]
+    },
+    "isPaid": false,
+    "payments": [
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      },
+      {
+        "member": "Nimi Nimi",
+        "productSum": 15
+      }
+    ],
+    "totalSum": 390,
+    "refNumber": "100008054",
+    "organizationBankAccount": "FI7311073000663413",
+    "barcode": "473110730006634130010230000000000000000100004537191005"
   }
 ]
