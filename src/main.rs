@@ -4,24 +4,33 @@ mod nda;
 use serde_json::Error;
 
 fn main() -> Result<(), Error> {
-    let j = include_str!("../example_data/ilmodata.json");
+    let payments_by_ref = {
+        let nda_file = include_str!("../example_data/bankdata.NDA");
+        nda::scrape_payments(nda_file)
+    };
 
-    let parsed: Vec<dom::Group> = serde_json::from_str(j)?;
+    let enrolment_info = include_str!("../example_data/ilmodata.json");
+    let parsed: Vec<dom::Group> = serde_json::from_str(enrolment_info)?;
 
     for group in &parsed {
         let name = &group.meta.name;
         let required = group.total_sum;
-        let account = &group.organization_bank_account;
         let ref_number = &group.ref_number;
+        let payments = {
+            match payments_by_ref.get(ref_number) {
+                Some(amount) => *amount,
+                None => 0f64,
+            }
+        };
+
         println!(
-            "Ryhmän '{}', pitäisi maksaa {} €. Tilinumero: {:?}. Viitenumero: {:?}.",
-            name, required, account, ref_number
+            "Ryhmän '{}' pitäisi maksaa {} €. Ryhmä on maksanut {} €. Erotus: {} €.",
+            name,
+            required,
+            payments,
+            payments - required
         );
     }
-
-    let nda_file = include_str!("../example_data/bankdata.NDA");
-    let payments_by_ref = nda::scrape_payments(nda_file);
-    println!("Maksut viitenumeron perusteella: {:?}", &payments_by_ref);
 
     Ok(())
 }
