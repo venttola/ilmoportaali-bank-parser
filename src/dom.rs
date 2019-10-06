@@ -69,3 +69,9 @@ impl Barcode {
         Barcode(s.to_string())
     }
 }
+
+#[test]
+fn dom_parses_right() {
+    let enrolment_info = include_str!("../example_data/ilmodata.json");
+    let _: Vec<Group> = serde_json::from_str(enrolment_info).unwrap();
+}

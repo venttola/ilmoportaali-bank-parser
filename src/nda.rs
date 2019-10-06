@@ -54,3 +54,31 @@ where
 
     payments_by_ref
 }
+
+#[test]
+fn nda_parses_right() {
+    let ref_number_1 = "100001608";
+    let payments_1 = 20f64;
+    let ref_number_2 = "100008054";
+    let payments_2 = 405f64;
+
+    let payments_by_ref = {
+        let nda_file = include_str!("../example_data/bankdata.NDA");
+        scrape_payments(nda_file)
+    };
+
+    assert_eq!(
+        *payments_by_ref.get(ref_number_1).expect(&format!(
+            "Payments for {} should be found in bankdata.NDA",
+            ref_number_1
+        )),
+        payments_1
+    );
+    assert_eq!(
+        *payments_by_ref.get(ref_number_2).expect(&format!(
+            "Payments for {} should be found in bankdata.NDA",
+            ref_number_2
+        )),
+        payments_2
+    );
+}
