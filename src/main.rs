@@ -1,4 +1,5 @@
 mod dom;
+mod nda;
 
 use serde_json::Error;
 
@@ -17,6 +18,10 @@ fn main() -> Result<(), Error> {
             name, required, account, ref_number
         );
     }
+
+    let nda_file = include_str!("../example_data/bankdata.NDA");
+    let payments_by_ref = nda::scrape_payments(nda_file);
+    println!("Maksut viitenumeron perusteella: {:?}", &payments_by_ref);
 
     Ok(())
 }
