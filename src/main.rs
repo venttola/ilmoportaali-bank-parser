@@ -42,10 +42,10 @@ fn main() {
 /// Scrapes payments by reference number (viitenumero) from given .NDA file.
 fn bankdata_from_nda_file(filename: &str) -> HashMap<String, f64> {
     let path = Path::new(filename);
-    let mut file = File::open(path).expect(&format!("cannot open file {:?}", path));
+    let mut file = File::open(path).unwrap_or_else(|_| panic!("cannot open file {:?}", path));
     let mut contents = String::new();
     file.read_to_string(&mut contents)
-        .expect(&format!("cannot read file {:?}", path));
+        .unwrap_or_else(|_| panic!("cannot read file {:?}", path));
 
     // scrape
     nda::scrape_payments(contents)
@@ -54,10 +54,10 @@ fn bankdata_from_nda_file(filename: &str) -> HashMap<String, f64> {
 /// Deserializes enrolment information from a JSON source.
 fn enrolment_info_from_json_file(filename: &str) -> Vec<dom::Group> {
     let path = Path::new(filename);
-    let mut file = File::open(path).expect(&format!("cannot open file {:?}", path));
+    let mut file = File::open(path).unwrap_or_else(|_| panic!("cannot open file {:?}", path));
     let mut contents = String::new();
     file.read_to_string(&mut contents)
-        .expect(&format!("cannot read file {:?}", path));
+        .unwrap_or_else(|_| panic!("cannot read file {:?}", path));
 
     // deserialize
     serde_json::from_str(&contents).expect("contents of {:?} do not parse into valid JSON")

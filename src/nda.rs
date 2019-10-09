@@ -34,16 +34,16 @@ where
         }
 
         // 2nd token contains the amount paid
-        let token2 = tokens.iter().nth(1).unwrap();
+        let token2 = tokens.get(1).unwrap();
         let amount_paid_raw = token2
             .parse::<i32>()
             .expect("Error in parsing i32 from 2nd token on 'Viitemaksu' line. Malformed .nda or incorrect parser implementation.");
         // convert to Eur
-        let amount_paid_eur = amount_paid_raw as f64 / 100.;
+        let amount_paid_eur = f64::from(amount_paid_raw) / 100.;
 
         let last_token = tokens.last().unwrap();
         assert_eq!(last_token.len(), 20, "Error in parsing 'Viitenumero' from last token on 'Viitemaksu' line. Token is not exactly 20 characters long. Malformed .nda or incorrect parser implementation.");
-        let ref_number = last_token.trim_start_matches("0");
+        let ref_number = last_token.trim_start_matches('0');
 
         if let Some(x) = payments_by_ref.get_mut(ref_number) {
             *x += amount_paid_eur;

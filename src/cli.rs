@@ -1,4 +1,4 @@
-use clap::{App, Arg, SubCommand};
+use clap::{App, Arg};
 
 pub const ARGNAME_ILMODATA: &str = "ilmodata JSON";
 pub const ARGNAME_BANKDATA: &str = "bankdata NDA";
