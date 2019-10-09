@@ -13,3 +13,15 @@ Tulosformaatti:
 - TBA. Jotain kivaa ja helposti luettavaa. Vaikka json
 
 Tarkennellaan speksiä sitten kun aivot toimivat paremmin.
+
+## Usage
+Build the tool with `cargo build --release`. Tool will be built to "target/release/checkpayments".
+
+`checkpayments ilmodata.json bankdata.nda` will output the differences in payment information and actual payments. This will be printed in .csv like:
+```
+group_name, missing_payments_eur
+Ryhmän Nimi, -15
+```
+Note that this negative value means that the group has paid too much.
+
+sa. `checkpayments --help` or output into file like so: `checkpayments ilmodata.json bankdata.nda > diff.csv`
