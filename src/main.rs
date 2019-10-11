@@ -20,7 +20,7 @@ fn main() {
     let payments_file = matches.value_of(ARGNAME_BANKDATA).unwrap();
     let payments_by_ref = bankdata_from_nda_file(payments_file);
 
-    println!("group_name, missing_payments_eur");
+    println!("group_name, payments, missing_payments_eur");
     for group in &groups {
         let name = &group.meta.name;
         let required = group.total_sum;
@@ -34,7 +34,7 @@ fn main() {
 
         let to_be_paid = required - payments;
         if to_be_paid != 0f64 {
-            println!("{}, {}", name, to_be_paid);
+            println!("{}, {}, {}", name, payments, to_be_paid);
         }
     }
 }
