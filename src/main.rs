@@ -33,9 +33,7 @@ fn main() {
         };
 
         let to_be_paid = required - payments;
-        if to_be_paid != 0f64 {
-            println!("{}, {}, {}", name, payments, to_be_paid);
-        }
+        println!("{}, {}, {}", name, payments, to_be_paid);
     }
 }
 
@@ -60,5 +58,5 @@ fn enrolment_info_from_json_file(filename: &str) -> Vec<dom::Group> {
         .unwrap_or_else(|_| panic!("cannot read file {:?}", path));
 
     // deserialize
-    serde_json::from_str(&contents).expect("contents of {:?} do not parse into valid JSON")
+    serde_json::from_str(&contents).expect("contents of {:?} do not parse into predefined schema")
 }
